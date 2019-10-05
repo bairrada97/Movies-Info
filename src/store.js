@@ -36,7 +36,7 @@ export default new Vuex.Store({
   actions: {
     getMovies(state, { movieName, currentPage }) {
       fetch(
-        `http://www.omdbapi.com/?s=${movieName}&page=${currentPage}&apikey=440f5ed0`
+        `https://www.omdbapi.com/?s=${movieName}&page=${currentPage}&apikey=440f5ed0`
       )
         .then(response => {
           return response.json();
@@ -51,7 +51,7 @@ export default new Vuex.Store({
         });
     },
     getSingleMovie(state, movieId) {
-      fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=440f5ed0`)
+      fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=440f5ed0`)
         .then(response => {
           return response.json();
         })
